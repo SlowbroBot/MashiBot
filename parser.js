@@ -102,7 +102,7 @@ exports.parse = {
 		if (!spl[1]) {
 			if (/was promoted to Room Driver/i.test(spl[0]) && toId(message.substring(0, message.indexOf("was"))) !== 'mashibot') this.say(connection, room, 'Congratulations on becoming a Driver ' + spl[0].substr(0, spl[0].indexOf("was promoted to Room") - 1) + '!^-^');
 			if (/was promoted to Room Moderator/i.test(spl[0]) && toId(message.substring(0, message.indexOf("was"))) !== 'mashibot') this.say(connection, room, 'Congratulations on becoming a Moderator ' + spl[0].substr(0, spl[0].indexOf("was promoted to Room") - 1) + '!^-^');
-			if (/was promoted to Room Owner/i.test(spl[0]) && toId(message.substring(0, message.indexOf("was"))) !== 'mashibot') this.say(connection, room, '**(/*-*)/ ALL HAIL ' + spl[0].substr(0, spl[0].indexOf("was promoted to Room") - 1) + ' (/*-*)/**');
+			if (/was appointed Room Owner/i.test(spl[0])) this.say(connection, room, '**(/*-*)/ ALL HAIL ' + spl[0].substr(0, spl[0].indexOf("was promoted to Room") - 1) + ' (/*-*)/**');
 			if (/was promoted to Room Voice/i.test(spl[0]) && toId(message.substring(0, message.indexOf("was"))) !== 'mashibot') this.say(connection, room, 'Congrats on becoming Voice ' + spl[0].substr(0, spl[0].indexOf("was promoted to Room") - 1) + '!^-^');
 			spl = spl[0].split('>');
 			if (spl[1]) this.room = spl[1];
